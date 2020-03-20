@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lalala.houtai.mapper.OrderMapper">
+<insert id="insertOrderOne" parameterType="Order">
+	INSERT INTO orders (orderName,operator,quantity,state,orderDate) VALUES (#{orderName},#{operator},#{quantity},#{state},default);
+</insert>
+	<select id="selectOrderId" parameterType="int" resultType="Order">
+		SELECT * from orders where id=#{id};
+	</select>
+	<select id="selectUsersAllFine" resultType="Order">
+		select * from orders where state=2;
+	</select>
+	<select id="selectUsersAllGo" resultType="Order">
+		select * from orders where state=1;
+	</select>
+	<delete id="orderDel" parameterType="int">
+		delete from orders where id = #{id};
+	</delete>
+	<update id="updateOrder" parameterType="Order" >
+		UPDATE orders SET
+			<if test="orderName!=null and orderName!=''">
+				orderName=#{orderName},
+			</if>
+			<if test="operator!=null and operator!=''">
+				operator=#{operator},
+			</if>
+			<if test="quantity!=0 and quantity!=''">
+				quantity=#{quantity},
+			</if>
+			<if test="state!=null and state!=''">
+				state=#{state},
+			</if>
+
+		orderDate=default  WHERE id = #{id};
+	</update>
+	<select id="maxId" resultType="int">
+		SELECT id from orders  where id=(select MAX(id) from orders );
+	</select>
+
+
+
+
+</mapper>

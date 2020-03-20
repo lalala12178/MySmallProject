@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Class-Path: jboss-logging-3.4.1.Final.jar thymeleaf-spring5-3.0.11.REL
+ EASE.jar spring-context-5.2.2.RELEASE.jar spring-boot-starter-logging
+ -2.2.2.RELEASE.jar snakeyaml-1.25.jar thymeleaf-3.0.11.RELEASE.jar ja
+ karta.validation-api-2.0.1.jar attoparser-2.0.5.RELEASE.jar log4j-api
+ -2.12.1.jar spring-boot-2.2.2.RELEASE.jar mybatis-3.5.3.jar mybatis-s
+ pring-boot-starter-2.1.1.jar spring-jdbc-5.2.2.RELEASE.jar tomcat-emb
+ ed-el-9.0.29.jar spring-aop-5.2.2.RELEASE.jar spring-boot-starter-jso
+ n-2.2.2.RELEASE.jar spring-boot-autoconfigure-2.2.2.RELEASE.jar jakar
+ ta.annotation-api-1.3.5.jar spring-expression-5.2.2.RELEASE.jar tomca
+ t-embed-core-9.0.29.jar spring-boot-starter-thymeleaf-2.2.2.RELEASE.j
+ ar spring-boot-starter-jdbc-2.2.2.RELEASE.jar jackson-core-2.10.1.jar
+  hibernate-validator-6.0.18.Final.jar log4j-to-slf4j-2.12.1.jar jacks
+ on-databind-2.10.1.jar mybatis-spring-boot-autoconfigure-2.1.1.jar sp
+ ring-jcl-5.2.2.RELEASE.jar jackson-datatype-jsr310-2.10.1.jar mysql-c
+ onnector-java-8.0.18.jar tomcat-embed-websocket-9.0.29.jar spring-boo
+ t-starter-validation-2.2.2.RELEASE.jar druid-1.1.21.jar jackson-modul
+ e-parameter-names-2.10.1.jar slf4j-api-1.7.29.jar unbescape-1.1.6.REL
+ EASE.jar logback-core-1.2.3.jar logback-classic-1.2.3.jar mybatis-spr
+ ing-2.0.3.jar HikariCP-3.4.1.jar jul-to-slf4j-1.7.29.jar spring-boot-
+ starter-2.2.2.RELEASE.jar spring-web-5.2.2.RELEASE.jar spring-boot-st
+ arter-web-2.2.2.RELEASE.jar jackson-datatype-jdk8-2.10.1.jar spring-b
+ eans-5.2.2.RELEASE.jar classmate-1.5.1.jar spring-tx-5.2.2.RELEASE.ja
+ r thymeleaf-extras-java8time-3.0.4.RELEASE.jar spring-core-5.2.2.RELE
+ ASE.jar spring-boot-starter-tomcat-2.2.2.RELEASE.jar jackson-annotati
+ ons-2.10.1.jar spring-webmvc-5.2.2.RELEASE.jar
+Main-Class: com.lalala.houtai.HoutaiApplication
+

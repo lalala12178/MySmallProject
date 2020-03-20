@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lalala.houtai.mapper.UsersMapper">
+    <insert id="insertUser" parameterType="Users">
+		INSERT INTO users (username, password,rid) VALUES (#{username},#{password},'4');
+	</insert>
+	<select id="login" parameterType="Users" resultType="Users">
+		SELECT * FROM users where username =#{username} and password=#{password};
+	</select>
+	<select id="selectUsersAll" resultType="Users">
+		select id,username,password,rid,income from users
+	</select>
+	<select id="selectUsersOne" parameterType="Users" resultType="Users">
+		SELECT * FROM users where username =#{username} and password=#{password}and rid=#{rid};
+	</select>
+	<insert id="insertUserAll" parameterType="Users" >
+		INSERT INTO users (username, password,rid,income) VALUES (#{username},#{password},#{rid},#{income});
+	</insert>
+	<update id="updateUser" parameterType="Users" >
+		UPDATE users SET username  = #{username},password = #{password},rid = #{rid},income=#{income}  WHERE id = #{id};
+	</update>
+	<delete id="delUser" parameterType="Users">
+		delete from users where id = #{id};
+	</delete>
+	<select id="roleName" parameterType="Users" resultType="Role">
+		select rolename,chirole from users a,role b where a.id=#{id} and a.rid = b.id;
+	</select>
+	<select id="maxId" resultType="int">
+		SELECT id from users  where id=(select MAX(id) from users );
+	</select>
+	<select id="selectById" parameterType="int" resultType="Users">
+		SELECT * from users  where id=#{id};
+	</select>
+	<select id="selectByName" parameterType="Users" resultType="Users">
+		SELECT * from users  where username=#{username};
+	</select>
+
+
+
+
+</mapper>
