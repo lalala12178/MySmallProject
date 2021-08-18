@@ -1,0 +1,5 @@
+# MySmallProject
+这是我个人在编程路上迈出的第一步，在此纪念曾经的自己
+这是一个企业管理系统，前端采用jquery
+后端为springMVC
+数据库为mysql
